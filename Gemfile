@@ -46,3 +46,4 @@ gem 'gmaps4rails'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'rails_12factor', group: :production
