@@ -1,0 +1,58 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*HOME*/
+
+.site-footer i:hover {
+    color: #ccc;
+}
+.site-footer i {
+    color: #fff;
+}
+.header-tag {
+    font-size: 6em;
+    font-family: 'Italianno', cursive;
+    color: #2a6900;
+}
+#space-divider {
+    padding: 3em 0;
+}
+.instagram-title {
+    color: #af3c92;
+}
+#home-testimonials-text {
+    color: #2f9780;
+}
+
+/*ABOUT*/
+
+#review_link_text {
+    font-size: 20px;
+}
+#main_availablity_text {
+    list-style: none;
+}
+
+#ali-bio {
+    margin-top: 25px;
+}
+#bio-text-box {
+    font-size: 20px;
+}
+#product-text-box {
+    font-size: 16px;
+}
+
+/*SERVICES*/
+
+.disclaimer {
+    color: red;
+}
+#services-list {
+    list-style: none;
+}
+#services-panel {
+    background: #2f9780;
+    color: #fff;
+}

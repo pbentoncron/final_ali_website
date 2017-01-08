@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .mobile-nav-text {
+     font-size: 2em;
+     font-family: 'Italianno', cursive;
+     color: #2a6900;
+     margin-left: 35%;
+ }
+ .navbar-default {
+     background: none;
+     border: none;
+     font-size: 20px;
+ }
+ body {
+     font-family: 'PT Serif', serif;
+     padding-top: 60px;
+ }
+ .navbar-fixed-top {
+     background: #fff;
+ }
+ html, body {
+   height: 100%;
+   margin: 0;
+ }
+ .page-padding {
+    padding: 3em 0;
+ }
+ .page-wrap {
+   min-height: 100%;
+   /* equal to footer height */
+   margin-bottom: -198px;
+ }
+ .site-footer, .push {
+   height: 198px;
+ }
+
+ .site-footer {
+     padding: 4em 0;
+     color: #fff;
+     text-align: center; 
+     background-color: #484848;
+     font-size: 16px;
+ }
+ .site-footer a {
+    color: #fff;
+    text-decoration: underline;
+ }
+ .site-footer a:hover {
+    color: #ccc;
+ }
+ footer a:link {
+     text-decoration: none;
+ }
+.btn {
+  border-radius: initial;
+}
+.btn-lg {
+  border-radius: initial;
+}
+@media (max-width: 768px) { 
+  .site-footer, .push {
+    height: 302px;
+  }
+  .page-wrap {
+    /* equal to footer height */
+    margin-bottom: -302px;
+  }
+ }
+ @media (min-width: 414px) and (max-width: 736px) {
+  .mobile-nav-text {
+      margin-left: 20%;
+  }
+ }
+ @media (min-width: 375px) and (max-width: 667px) {
+  .mobile-nav-text {
+      margin-left: 10%;
+  }
+ }
+ @media (min-width: 320px) and (max-width: 568px) {
+  .mobile-nav-text {
+      margin-left: 5%;
+  }
+ }

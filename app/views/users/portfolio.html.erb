@@ -1,0 +1,37 @@
+<div class="text-center">
+    <ul class="list-inline hidden-xs">
+        <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
+        <li><p class="header-tag">Hair by Ali Cron</p></li>
+        <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
+    </ul>
+</div>
+<section>
+    <!-- instafeed-portfolio -->
+
+    <script type="text/javascript">
+        $( document ).ready( function() {
+            var userFeed = new Instafeed({
+                get: 'user',
+                userId: '3054008733',
+                target: 'instafeed-portfolio',
+                accessToken: '3054008733.b3ed9be.9fe3223dae414264809154a9598ced09',
+                clientId: 'b3ed9bec7753418a94d68a9aca3c83ee',
+                resolution: 'standard_resolution',
+                sortBy: 'most-recent',
+                limit: 60,
+                template: '<div class="col-xs-6 col-sm-3"><a href="{{link}}" target="_blank"><br><img class="img-responsive center-block" src="http:{{image}}" /></a></div>',
+            });
+            userFeed.run();
+        });
+    </script>
+    <div class="container">
+        <header>
+            <div class="instafeed-content">
+                <div class="row">
+                    <div id="instafeed-portfolio"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </header>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 id="jumbo-header-text">Testimonials!</h1>
+    <p class="jumbo-p-text">See what people are saying</p>
+    <p><a class="btn btn-primary btn-lg" href="/reviews" role="button">Submit a Review</a></p>
+  </div>
+</div>
+<div class="container">
+    <div class="row text-sm-left">
+        <% @reviews.each do |review| %>
+            <% if review.approved == true %>
+        <div class="col-xs-8 col-sm-12">
+            <div>
+                <p><i class="fa fa-quote-left fa-2x" aria-hidden="true" style="color: #cccccc;"></i> <%= review.content %></p>
+                <footer>- <%= review.user.first_name %> <%= review.user.last_name %></footer>
+            </div>
+            <hr>
+        </div>
+            <% end %>
+        <% end %>
+    </div>
+    <div class="text-center">
+        <%= paginate @reviews, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-small" %>
+    </div>
+</div>

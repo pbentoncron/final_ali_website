@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <form action="/reviews" method="POST">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <div class="form-group">
+                  <label for="InputContent">Leave a review for Ali!</label>
+                  <textarea type="text" class="form-control" name="review[content]" rows="4"></textarea>
+                </div>
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit Review">
+            </form>
+        </div>
+    </div>
+</div>
