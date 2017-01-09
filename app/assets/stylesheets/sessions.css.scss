@@ -2,17 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-tr {
+#admin-tr {
 width: 100%;
 display: inline-table;
 table-layout: fixed;
 }
 
-table{
+#admin-table{
  height:300px;              // <-- Select the height of the table
  display: -moz-groupbox;    // Firefox Bad Effect
 }
-tbody{
+#admin-tbody{
   overflow-y: scroll;      
   height: 200px;            //  <-- Select the height of the body
   width: 100%;

@@ -26,6 +26,23 @@ class UsersController < ApplicationController
     def portfolio
     end
 
+    def show
+        @user = current_user
+    end
+
+    def update
+        if current_user.update(user_params)
+            redirect_to user_path
+            else
+            flash[:errors] = ["Something went wrong!"]
+            redirect_to :back
+        end
+    end
+
+    def edit
+        @user = current_user
+    end
+
     def admin?
       current_user.admin == true
     end
