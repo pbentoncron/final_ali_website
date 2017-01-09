@@ -27,20 +27,28 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = current_user
+        if !current_user
+            redirect_to root_path
+        else
+            @user = current_user
+        end
     end
 
     def update
         if current_user.update(user_params)
             redirect_to user_path
-            else
-            flash[:errors] = ["Something went wrong!"]
+        else
+            flash[:errors] = ["Something went wrong, please try again!"]
             redirect_to :back
         end
     end
 
     def edit
-        @user = current_user
+        if !current_user
+            redirect_to root_path
+        else
+            @user = current_user
+        end
     end
 
     def admin?
