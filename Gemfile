@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby "2.2.4"
+
 gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -47,3 +49,4 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails_12factor', group: :production
+gem 'puma'
