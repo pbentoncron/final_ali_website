@@ -12,7 +12,7 @@
     <div class="row text-sm-left">
         <% @reviews.each do |review| %>
             <% if review.approved == true %>
-        <div class="col-xs-8 col-sm-12">
+        <div class="col-sm-12 col-md-12">
             <div>
                 <p><i class="fa fa-quote-left fa-2x" aria-hidden="true" style="color: #cccccc;"></i> <%= review.content %></p>
                 <footer>- <%= review.user.first_name %> <%= review.user.last_name %></footer>
