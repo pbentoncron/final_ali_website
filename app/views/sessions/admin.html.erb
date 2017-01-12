@@ -26,6 +26,8 @@
                       <input type="hidden" name="review[approved]" value="<%= review.id %>">
                       <input class="btn btn-success pull-left" type='submit' value='Approved'>
                     </form>
+                  </td>
+                  <td>
                     <form action="/reviews/<%= review.id %>" method='post'>
                       <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
                       <input type='hidden' name='_method' value='delete'>
