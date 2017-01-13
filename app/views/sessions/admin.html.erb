@@ -3,39 +3,66 @@
     <div class="col-sm-12 col-md-12">
         <h4>Reviews that need to be approved!</h4>
         <hr>
-        <table id="admin-table" class="table table-responsive table-bordered">
+        <table class="table table-responsive table-striped">
           <thead>
-            <tr id="admin-tr" class="active">
+            <tr>
               <th>Name</th>
               <th>Content</th>
               <th>user_id</th>
               <th>Actions</th>
+              <th></th>
             </tr>
           </thead>
-            <tbody id="admin-tbody">
+            <tbody>
                 <% @reviews.each do |review| %>
                   <% if review.approved == false %>
-                <tr id="tr-fix">
+                <tr>
                   <td><%= review.user.first_name %> <%= review.user.last_name %></td>
-                  <td><p class="text-justify"><%= review.content %></p></td>
+                  <td><%= review.content %></td>
                   <td><%= review.user.id %></td>
                   <td>
                     <form action="/reviews/<%= review.id %>" method='post'>
                       <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
                       <input type='hidden' name='_method' value='put'>
                       <input type="hidden" name="review[approved]" value="<%= review.id %>">
-                      <input class="btn btn-success pull-left" type='submit' value='Approved'>
+                      <input class="btn btn-success" type='submit' value='Approved'>
                     </form>
                   </td>
                   <td>
                     <form action="/reviews/<%= review.id %>" method='post'>
                       <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
                       <input type='hidden' name='_method' value='delete'>
-                      <input class="btn btn-danger pull-right" type='submit' value='Rejected'>
+                      <input class="btn btn-danger" type='submit' value='Rejected'>
                     </form>
                   </td>
                 </tr>
                   <% end %>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+        <h4>Here is a list of all the users in the database!</h4>
+        <hr>
+        <table class="table table-responsive table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>user_id</th>
+            </tr>
+          </thead>
+            <tbody>
+                <% @users.each do |user| %>
+                <tr>
+                  <td><%= user.first_name %> <%= user.last_name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.phone %></td>
+                  <td><%= user.id %></td>
+                </tr>
                 <% end %>
             </tbody>
         </table>

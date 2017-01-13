@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
         redirect_to root_path
       else
         @reviews = Review.all.order(created_at: :desc)
+        @users = User.all.order(created_at: :desc)
         render 'admin'
       end 
     end
