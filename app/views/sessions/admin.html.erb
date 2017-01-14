@@ -3,68 +3,75 @@
     <div class="col-sm-12 col-md-12">
         <h4>Reviews that need to be approved!</h4>
         <hr>
-        <table class="table table-responsive table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Content</th>
-              <th>user_id</th>
-              <th>Actions</th>
-              <th></th>
-            </tr>
-          </thead>
-            <tbody>
-                <% @reviews.each do |review| %>
-                  <% if review.approved == false %>
-                <tr>
-                  <td><%= review.user.first_name %> <%= review.user.last_name %></td>
-                  <td><%= review.content %></td>
-                  <td><%= review.user.id %></td>
-                  <td>
-                    <form action="/reviews/<%= review.id %>" method='post'>
-                      <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
-                      <input type='hidden' name='_method' value='put'>
-                      <input type="hidden" name="review[approved]" value="<%= review.id %>">
-                      <input class="btn btn-success" type='submit' value='Approved'>
-                    </form>
-                  </td>
-                  <td>
-                    <form action="/reviews/<%= review.id %>" method='post'>
-                      <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
-                      <input type='hidden' name='_method' value='delete'>
-                      <input class="btn btn-danger" type='submit' value='Rejected'>
-                    </form>
-                  </td>
-                </tr>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Content</th>
+                <th>user_id</th>
+                <th>Actions</th>
+                <th></th>
+              </tr>
+            </thead>
+              <tbody>
+                  <% @reviews.each do |review| %>
+                    <% if review.approved == false %>
+                  <tr>
+                    <td><%= review.user.first_name %> <%= review.user.last_name %></td>
+                    <td><%= review.content %></td>
+                    <td><%= review.user.id %></td>
+                    <td>
+                      <form action="/reviews/<%= review.id %>" method='post'>
+                        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+                        <input type='hidden' name='_method' value='put'>
+                        <input type="hidden" name="review[approved]" value="<%= review.id %>">
+                        <input class="btn btn-success" type='submit' value='Approved'>
+                      </form>
+                    </td>
+                    <td>
+                      <form action="/reviews/<%= review.id %>" method='post'>
+                        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+                        <input type='hidden' name='_method' value='delete'>
+                        <input class="btn btn-danger" type='submit' value='Rejected'>
+                      </form>
+                    </td>
+                  </tr>
+                    <% end %>
                   <% end %>
-                <% end %>
-            </tbody>
-        </table>
-        <br>
-        <h4>Here is a list of all the users in the database!</h4>
-        <hr>
-        <table class="table table-responsive table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Admin</th>
-              <th>user_id</th>
-            </tr>
-          </thead>
-            <tbody>
-                <% @users.each do |user| %>
+              </tbody>
+          </table>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+          <h4>Here is a list of all the users in the database!</h4>
+          <hr>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
                 <tr>
-                  <td><%= user.first_name %> <%= user.last_name %></td>
-                  <td><%= user.email %></td>
-                  <td><%= user.phone %></td>
-                  <td><%= user.admin %></td>
-                  <td><%= user.id %></td>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Admin</th>
+                  <th>user_id</th>
                 </tr>
-                <% end %>
-            </tbody>
-        </table>
+              </thead>
+                <tbody>
+                    <% @users.each do |user| %>
+                    <tr>
+                      <td><%= user.first_name %> <%= user.last_name %></td>
+                      <td><%= user.email %></td>
+                      <td><%= user.phone %></td>
+                      <td><%= user.admin %></td>
+                      <td><%= user.id %></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+          </div>
+      </div>
     </div>
   </div>
 </div>
