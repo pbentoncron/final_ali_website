@@ -33,12 +33,26 @@
 #main_availablity_text {
     list-style: none;
 }
-
-#ali-bio {
-    margin-top: 25px;
+.about-header {
+    min-height: 700px;
+    background: linear-gradient(to bottom, transparent, rgba(96, 96, 96, 0.7)), url('ali-bg.jpg') no-repeat 0 -70px;
+    background-size: cover;
+    border-bottom: 1px solid #878787;
 }
-#product-text-box {
-    font-size: 16px;
+.about-header p {
+    margin-top: 37%;
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+.about-dark {
+    padding: 3em 0;
+    color: #fff;
+    background-color: #2f9780;
+    font-size: 1.8rem;
+}
+.kevin_murphy_img {
+    padding: 3em 0;
 }
 
 /*SERVICES*/
@@ -52,4 +66,42 @@
 #services-panel {
     background: #2f9780;
     color: #fff;
+}
+
+@media screen and (max-width: 414px) {
+    .about-header {
+        min-height: 700px;
+        background: linear-gradient(to bottom, transparent, rgba(96, 96, 96, 0.7)), url('ali-bg.jpg') no-repeat -370px 0px;
+        background-size: cover;
+    }
+    .about-header p {
+        margin-top: 88%;
+        color: #fff;
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 1024px) {
+    .about-header {
+        min-height: 700px;
+        background: linear-gradient(to bottom, transparent, rgba(96, 96, 96, 0.7)), url('ali-bg.jpg') no-repeat -10px 0px;
+        background-size: cover;
+    }
+    .about-header p {
+        margin-top: 45%;
+        color: #fff;
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 414px) and (max-width: 736px) {
+    .about-header {
+        min-height: 700px;
+        background: linear-gradient(to bottom, transparent, rgba(96, 96, 96, 0.7)), url('ali-bg.jpg') no-repeat -268px 0px;
+        background-size: cover;
+    }
+    .about-header p {
+        margin-top: 56%;
+        color: #fff;
+        font-size: 2rem;
+    }
 }
