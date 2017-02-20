@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     end
 
     def home
-        @reviews = Review.where(approved: true).last(3)
+        @reviews = Review.where(approved: true).limit(3).order("RANDOM()")
     end
 
     def about

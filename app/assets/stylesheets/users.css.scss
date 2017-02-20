@@ -3,7 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*HOME*/
-
+.home-section-plain {
+    padding: 0 0 3em 0;
+}
+.specials-display-home {
+    background: #f7f7f7;
+    padding: 1em 0 1em 0;
+    font-size: 1.5em;
+    color: #2f9780;
+}
+.specials-display-home span {
+    color: #2f9780;
+    font-size: 2em;
+}
+.image-text-box {
+    background: #f7f7f7;
+    padding: 1em 0 1em 0;
+}
+.about-snippet {
+    line-height: 2.5em;
+    letter-spacing: normal;
+    font-size: 1.2em;
+}
+#mini-space-divider {
+    padding: 2em 0;
+}
+.home-carousel-section {
+    padding: 0 0;
+}
 .site-footer i:hover {
     color: #ccc;
 }
@@ -13,7 +40,7 @@
 .header-tag {
     font-size: 6em;
     font-family: 'Italianno', cursive;
-    color: #2a6900;
+    color: #2f9780;
 }
 #space-divider {
     padding: 3em 0;
@@ -21,15 +48,19 @@
 .instagram-title {
     color: #af3c92;
 }
+.instagram-title a {
+    color: #af3c92;
+}
 #home-testimonials-text {
     color: #2f9780;
+}
+#review_link_text {
+    font-size: 20px;
+    text-decoration: none;
 }
 
 /*ABOUT*/
 
-#review_link_text {
-    font-size: 20px;
-}
 #main_availablity_text {
     list-style: none;
 }
@@ -66,6 +97,11 @@
 #services-panel {
     background: #2f9780;
     color: #fff;
+}
+#external-links {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 414px) {

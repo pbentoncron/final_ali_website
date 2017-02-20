@@ -19,12 +19,22 @@ class ReviewsController < ApplicationController
       end
     end
 
+    def edit
+      if !current_user
+          redirect_to root_path
+      else
+          @user = current_user
+          @review = Review.find(params[:id])
+      end
+    end
+
     def testimonials
-      @reviews = Review.all.order(created_at: :desc).page(params[:page]).per(10)
+      @reviews = Review.all.order(created_at: :desc).page(params[:page]).per(5)
     end
 
     def update
       review = Review.find(params[:id])
+
       if review.update(approved: true)
           redirect_to admin_path
       else
@@ -33,10 +43,24 @@ class ReviewsController < ApplicationController
       end
     end
 
+    def update_two
+      @review = Review.find(params[:id])
+      if @review.update(review_params)
+        redirect_to testimonials_path
+      else
+        flash[:errors] = ["Something went wrong!"]
+        redirect_to edit_review_path
+      end
+    end
+
     def destroy
       @review = Review.find(params[:id])
       @review.destroy
-      redirect_to admin_path
+      if current_user.admin == true
+        redirect_to admin_path
+      else
+        redirect_to testimonials_path
+      end
     end
 
     private

@@ -1,85 +1,185 @@
 <% title "Fort Worth/DFW Hairstylist - Home " %>
 <% meta_description "HairByAliCron specializes in ombré, balayage, and dimensional color in Fort Worth, Texas." %>
 <% meta_keywords "Fort Worth, DFW, Testimonials, Alison Cron, ombré, balayage, dimensional color" %>
-<div class="container">
-    <div class="text-center">
-        <ul class="list-inline hidden-xs">
-            <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
-            <li><p class="header-tag">Hair by Ali Cron</p></li>
-            <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
-        </ul>
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 visible-lg">
-                <%=image_tag("ali_pic_homepage.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
-            </div>
-            <div class="col-md-4 col-md-offset-4 visible-md">
-                <%=image_tag("ali_pic_homepage.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
-            </div>
-            <div class="col-sm-4 col-sm-offset-4 visible-sm">
-                <%=image_tag("ali_pic_homepage.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
-            </div>
-            <div class="col-sm-12 visible-xs">
-                <%=image_tag("ali_pic_homepage.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
-            </div>
+
+<section class="home-section-plain">
+    <div class="container">
+
+        <div class="text-center">
+
+            <ul class="list-inline hidden-xs">
+                <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
+                <li><p class="header-tag">Hair by Ali Cron</p></li>
+                <li><i class="fa fa-scissors fa-3x fa-rotate-270" aria-hidden="true"></i></li>
+            </ul>
+
         </div>
-        <h3>specializing in ombré, balayage, and dimensional color</h3>
-    </div>
-    <div id="space-divider">
-        <!-- space filler -->
-    </div>
-    <div class="text-center">
-        <h2 id="home-testimonials-text">Testimonials</h2>
-        <p class="text-muted">What's trending about Ali</p>
-    </div>
-    <div class="row text-sm-left">
-        <% @reviews.each do |review| %>
-            <% if review.approved == true %>
-        <div class="col-sm-12 col-md-4">
-            <div>
-                <p><i class="fa fa-quote-left fa-2x" aria-hidden="true" style="color: #cccccc;"></i> <%= review.content %></p>
-                <footer>- <%= review.user.first_name %> <%= review.user.last_name %></footer>
-            </div>
-            <hr class="visibile-sm hidden-md hidden-lg">
-        </div>
-            <% end %>
-        <% end %>
-    </div>
-    <br>
-    <div class="text-center" id="review_link_text">
-        <%= link_to "Leave a Review", reviews_path %> | <%= link_to "View All", testimonials_path %>
-    </div>
-    <div id="space-divider">
-        <!-- space filler -->
-    </div>
-    <section>
-        <!-- instafeed -->
+
+        <h3 class="visible-sm visible-xs text-center">specializing in ombré, balayage, and dimensional color</h3>
         
-        <script type="text/javascript">
-            $( document ).ready( function() {
-                var userFeed = new Instafeed({
-                    get: 'user',
-                    userId: '3054008733',
-                    target: 'instafeed',
-                    accessToken: '3054008733.b3ed9be.9fe3223dae414264809154a9598ced09',
-                    clientId: 'b3ed9bec7753418a94d68a9aca3c83ee',
-                    resolution: 'low_resolution',
-                    limit: 4,
-                    sortBy: 'most-liked',
-                    template: '<div class="col-xs-6 col-sm-3"><a href="{{link}}" target="_blank"><br><img class="img-responsive center-block" src="http:{{image}}" /></a></div>',
-                });
-                userFeed.run();
-            });
-        </script>
-        <div class="container">
-            <header>
-                <div class="instafeed-content">
-                    <h2 class="text-center">Follow on: <span class="instagram-title">Instagram</span></h2>
-                    <div class="row">
-                        <div id="instafeed"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </header>
+        <div class="row image-text-box">
+            <div class="col-lg-8 visible-lg">
+
+            <div id="space-divider">
+                <!-- space filler -->
+            </div>
+
+            <div id="mini-space-divider">
+                <!-- space filler -->
+            </div>
+
+            <p class="about-snippet">Hi, I'm Alison but most people call me Ali. I'm an Aveda trained hairstylist with four years of experience. At Salon on the Park, you will enjoy the laid back atmosphere where we offer complimentary coffee, water or sodas, along with a complimentary hand massage to make sure you are nice and relaxed! I look forward to meeting you!</p>
+
+            </div>
+            <div class="col-lg-4 visible-lg">
+                <%=image_tag("ali_pic_homepage1.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+            </div>
+            
+            <div class="col-md-8 visible-md">
+
+            <div id="space-divider">
+                <!-- space filler -->
+            </div>
+
+            <div id="mini-space-divider">
+                <!-- space filler -->
+            </div>
+
+            <p class="about-snippet">Hi, I'm Alison but most people call me Ali. I'm an Aveda trained hairstylist with four years of experience. At Salon on the Park, you will enjoy the laid back atmosphere where we offer complimentary coffee, water or sodas, along with a complimentary hand massage to make sure you are nice and relaxed! I look forward to meeting you!</p>
+
+            <div class="col-md-4 visible-md">
+                <%=image_tag("ali_pic_homepage1.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+            </div>
+            
+            <div class="col-sm-8 visible-sm">
+
+            <div id="space-divider">
+                <!-- space filler -->
+            </div>
+
+            <div id="mini-space-divider">
+                <!-- space filler -->
+            </div>
+
+            <p class="about-snippet">Hi, I'm Alison but most people call me Ali. I'm an Aveda trained hairstylist with four years of experience. At Salon on the Park, you will enjoy the laid back atmosphere where we offer complimentary coffee, water or sodas, along with a complimentary hand massage to make sure you are nice and relaxed! I look forward to meeting you!</p>
+
+            <div class="col-sm-4 visible-sm">
+                <%=image_tag("ali_pic_homepage1.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+            </div>
+            
+            <div class="col-sm-12 visible-xs">
+                <%=image_tag("ali_pic_homepage1.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<div class="specials-display-home">
+    
+    <p class="text-center">Refer 3 guest and receive a <span>complimentary haircut!!!</span></p>
+
 </div>
+
+<section class="section-green">
+  <div class="container">
+    <div class="text-center">
+
+    </div>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <h2>Hours of Operation</h2>
+        <strong>Wednesday-Friday</strong>
+        <p>9:00 am - 7:00 pm</p>
+        <strong>Saturday</strong>
+        <p>9:00 am - 5:00 pm</p>
+        <strong>Sunday-Tuesday</strong>
+        <p>Closed</p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Services</h2>
+        <p>Haircuts</p>
+        <p>Hair Extentions</p>
+        <p>Hair Styling</p>
+        <p>Kevin Murphy Hair Color Services</p>
+        <p>Waxing Services</p>
+        <h4><%= link_to "See Pricing", services_path %></h4>
+      </div>
+      <div class="col-sm-4">
+        <h2>Directions</h2>
+        <p>Located between Finn MacCool's Pub and Urban Yoga Studio</p>
+        <p>Parking is available behind building</p>
+        <address>
+          <p>1704 8TH AVE.<br class="none">FORT WORTH, TX 76110</p>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+    <!-- instafeed -->
+    
+    <script type="text/javascript">
+        $( document ).ready( function() {
+            var userFeed = new Instafeed({
+                get: 'user',
+                userId: '3054008733',
+                target: 'instafeed',
+                accessToken: '3054008733.b3ed9be.9fe3223dae414264809154a9598ced09',
+                clientId: 'b3ed9bec7753418a94d68a9aca3c83ee',
+                resolution: 'low_resolution',
+                limit: 4,
+                sortBy: 'most-liked',
+                template: '<div class="col-xs-6 col-sm-3"><a href="{{link}}" target="_blank"><br><img class="img-responsive center-block" src="http:{{image}}" /></a></div>',
+            });
+            userFeed.run();
+        });
+    </script>
+
+    <div class="container">
+        <header>
+
+            <div class="instafeed-content">
+                <h2 class="text-center">Follow on: <span class="instagram-title"><a href="https://www.instagram.com/hairbyalicron/" target="_blank">Instagram</a></span></h2>
+                <div class="row">
+                    <div id="instafeed"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </header>
+    </div> 
+</section>
+
+<section class="section-plain">
+    <div class="container">
+        <div class="text-center">
+            <h2 id="home-testimonials-text">Testimonials</h2>
+            <p class="text-muted">What's trending about Ali</p>
+        </div>
+
+        <div class="row text-sm-left">
+            <% @reviews.each do |review| %>
+                <% if review.approved == true %>
+            <div class="col-sm-12 col-md-4">
+                <div>
+                    <p><i class="fa fa-quote-left fa-2x" aria-hidden="true" style="color: #cccccc;"></i> <%= review.content %></p>
+                    <footer>- <%= review.user.first_name %> <%= review.user.last_name %></footer>
+                    <% if current_user == review.user %>
+                        <%= link_to "Edit", edit_review_path(review.id) %> |
+                        <%= link_to "Delete", review_path(review.id), method: :delete %>
+                    <% end %>
+                </div>
+                <hr class="visibile-sm hidden-md hidden-lg">
+            </div>
+                <% end %>
+            <% end %>
+        </div>
+
+        <br>
+
+        <div class="text-center" id="review_link_text">
+            <%= link_to "Leave a Review", reviews_path %> | <%= link_to "View All", testimonials_path %>
+        </div>
+    </div>
+</section>

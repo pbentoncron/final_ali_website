@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h3>Edit Your Review</h3>
+            <hr>
+            <form action="/update_two/<%= @review.id %>" method="post">
+                <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+                <input type="hidden" name="_method" value="put">
+
+                <div class="form-group">
+                    <label>Review</label>
+                    <input type="text" name="review[content]" value ="<%= @review.content %>" class="form-control">
+                </div>
+
+                <button type="submit" value="create" class="btn btn-success">Update</button> | <%= link_to "Back", :back, class: "btn btn-warning" %>
+            </form>
+        </div>
+    </div>
+</div>

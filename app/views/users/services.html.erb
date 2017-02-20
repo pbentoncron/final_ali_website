@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                <div id="services-panel" class="panel-heading text-center"><h3>HAIR CUTS</h3></div>
+                <div id="services-panel" class="panel-heading text-center"><h3>Haircuts</h3></div>
                 <div class="panel-body">
                   <p class="text-center">Guest's enjoy complimentary neck and bang trims in-between services.</p>
                 </div>
@@ -26,10 +26,36 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                <div id="services-panel" class="panel-heading text-center"><h3>HAIR STYLING</h3></div>
+                <div id="services-panel" class="panel-heading text-center"><h3>Hair Extentions</h3></div>
+                <div class="panel-body">
+                  <p class="text-center">Hotheads Hair Extensions are uniquely designed to lay completely seamless and undetectable in the hair. Manufactured with amazing quality human remy hair with the cuticle intact allows our hair to be reapplied up to 3 times, while still looking and feeling amazing. Clients will get 8 to 10 weeks of wear from each application. <br> <%= link_to "VISIT HOTHEADS WEBSITE TO LEARN MORE!", "http://www.hotheads.com/extensions/", target: "_blank", id: "external-links" %> </p>
+                </div>
+                <ul id="services-list" class="list-group">
+                    <li class="list-group-item"><strong>Extensions</strong>
+                    <p>- Accomplish the look you want!</p>
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <%=image_tag("extentions-crop.png", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+                        </div>
+                        <div class="col-sm-4 pull-right">
+                        <%=image_tag("shelby.JPG", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+                        </div>
+                        <div class="col-sm-4 pull-right">
+                        <%=image_tag("extentions-crop1.png", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+                        </div>
+                    </div>
+                    <strong>Price: Based Upon Consultation</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div id="services-panel" class="panel-heading text-center"><h3>Hair Styling</h3></div>
                 <div class="panel-body">
                   <p class="text-center">Available for on-site weddings depending on location and scheduling.</p>
-                  <p class="text-center disclaimer">*Travel fees not included and wedding prices may differ. Contact me directly for a quote.</p>
+                  <p class="text-center disclaimer">*Travel fees not included and wedding prices may differ. <%= link_to "Contact", contacts_path %> me directly for a quote.</p>
                 </div>
                 <ul id="services-list" class="list-group">
                     <li class="list-group-item"><strong>Shampoo &amp; Blowout</strong>
@@ -56,6 +82,9 @@
                 <div id="services-panel" class="panel-heading text-center"><h3>Kevin Murphy Hair Color Services</h3></div>
                 <div class="panel-body">
                   <p class="text-center">This compact color line delivers high performance, natural looking results and optimum color functionality. An artful blend of gentle and "from the earth" ingredients naturally moisturize with honey-based color, rejuvenate and impart incredible shine without having to further compromise the environment.</p>
+
+                  <p class="text-center"><%= link_to "VISIT KEVIN MURPHY'S WEBSITE TO LEARN MORE!", "http://kevinmurphy.com.au/", target: "_blank", id: "external-links" %></p>
+                  
                   <p class="text-center disclaimer">*Pricing may increase depending on thickness and length of hair. Each additional color bowl is $20.</p>
                 </div>
                 <ul id="services-list" class="list-group">

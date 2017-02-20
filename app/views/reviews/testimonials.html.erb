@@ -16,6 +16,10 @@
             <div>
                 <p><i class="fa fa-quote-left fa-2x" aria-hidden="true" style="color: #cccccc;"></i> <%= review.content %></p>
                 <footer>- <%= review.user.first_name %> <%= review.user.last_name %></footer>
+                <% if current_user == review.user %>
+                    <%= link_to "Edit", edit_review_path(review.id) %> |
+                    <%= link_to "Delete", review_path(review.id), method: :delete %>
+                <% end %>
             </div>
             <hr>
         </div>

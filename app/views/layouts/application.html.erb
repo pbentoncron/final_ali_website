@@ -42,22 +42,23 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/services">Services</a></li>
-                  <li><a href="/portfolio">Portfolio</a></li>
-                  <li><a href="/contacts">Contact</a></li>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/about">ABOUT</a></li>
+                  <li><a href="/services">SERVICES</a></li>
+                  <li><a href="/portfolio">PORTFOLIO</a></li>
+                  <li><a href="/testimonials">TESTIMONIALS</a></li>
+                  <li><a href="/contacts">CONTACT</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <% if !current_user %>
-                  <li><a href="/users"><i class="fa fa-lock" aria-hidden="true"></i> Register</a></li>
-                  <li><a href="/sessions">Login</a></li>
+                  <li><a href="/users"><i class="fa fa-lock" aria-hidden="true"></i> REGISTER</a></li>
+                  <li><a href="/sessions">LOGIN</a></li>
                 <% elsif current_user.admin? %>
-                  <li><a href="/admin">Admin</a></li>
-                  <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
+                  <li><a href="/admin">ADMIN</a></li>
+                  <li><%= link_to "LOGOUT", session_path(current_user), method: :delete %></li>
                 <% else current_user %>
-                <li><a href="/users/<%= current_user.id %>" class="navbar-link">Profile</a></li>
-                <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
+                <li><a href="/users/<%= current_user.id %>" class="navbar-link">PROFILE</a></li>
+                <li><%= link_to "LOGOUT", session_path(current_user), method: :delete %></li>
                 <% end %>
               </ul>
           </div><!-- /.navbar-collapse -->
@@ -96,11 +97,11 @@
           <div class="row" id="footer-row">
               <div class="col-sm-4">
                   <h3>HairbyAliCron</h3>
-                  <p><i class="fa fa-copyright" aria-hidden="true"></i><span> 2016</span></p>
+                  <p><i class="fa fa-copyright" aria-hidden="true"></i><span> 2017</span></p>
               </div>
               <div class="col-sm-4">
                   <address>
-                      <a href="/contacts"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> (817)565-9596</a>
+                      <a href="/contacts"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> (817) 565-9596</a>
                       <p>1704 8TH AVE.<br class="none">FORT WORTH, TX 76110</p>
                   </address>
               </div>
