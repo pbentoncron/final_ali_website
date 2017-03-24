@@ -9,15 +9,14 @@
 .specials-display-home {
     background: #f7f7f7;
     padding: 1em 0 1em 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #2f9780;
 }
 .specials-display-home span {
-    color: #2f9780;
-    font-size: 2em;
+    color: #1a7ace;
+    font-size: 1.3em;
 }
 .image-text-box {
-    background: #f7f7f7;
     padding: 1em 0 1em 0;
 }
 .about-snippet {
@@ -42,11 +41,15 @@
 #space-divider {
     padding: 3em 0;
 }
-.instagram-title {
-    color: #af3c92;
+.link_to_see_pricing a:hover {
+    text-decoration: none;
 }
 .instagram-title a {
     color: #af3c92;
+}
+.instagram-title a:hover {
+    color: #af3c92;
+    text-decoration: none;
 }
 #home-testimonials-text {
     color: #2f9780;
@@ -54,6 +57,14 @@
 #review_link_text {
     font-size: 20px;
     text-decoration: none;
+}
+#review_link_text a:hover {
+    font-size: 20px;
+    text-decoration: none;
+}
+#review_link_text span {
+    font-size: 20px;
+    color: #2f9780;
 }
 
 /*ABOUT*/
@@ -81,6 +92,42 @@
 }
 .kevin_murphy_img {
     padding: 3em 0;
+}
+/*PORTFOLIO*/
+
+#instafeed-portfolio a {
+  padding:5px 5px 5px 5px;
+  margin:10px;
+  border:1px solid #e1e1e1;
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
+}
+
+#instafeed-portfolio .likes {
+  background:rgba(222,89,135,0.8);
+  font-family:sans-serif;
+  font-size:1em;
+  position:absolute;
+  color:#ffffff;
+  right:10px;
+  top:10px;
+  left:10px;
+  bottom: 10px;
+  opacity:0;
+  text-align:center;
+  line-height:220px;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+    -moz-transition: opacity 100ms ease;
+    -o-transition: opacity 100ms ease;
+    -ms-transition: opacity 100ms ease;
+    transition: opacity 100ms ease;
+}
+
+#instafeed-portfolio a:hover .likes {
+  opacity:1;
 }
 
 /*SERVICES*/

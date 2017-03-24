@@ -14,19 +14,32 @@
     <script type="text/javascript">
         $( document ).ready( function() {
             var userFeed = new Instafeed({
-                get: 'user',
-                userId: '3054008733',
-                target: 'instafeed-portfolio',
-                accessToken: '3054008733.b3ed9be.9fe3223dae414264809154a9598ced09',
-                clientId: 'b3ed9bec7753418a94d68a9aca3c83ee',
-                resolution: 'standard_resolution',
-                sortBy: 'most-recent',
-                limit: 60,
-                template: '<div class="col-xs-6 col-sm-3"><a href="{{link}}" target="_blank"><br><img class="img-responsive center-block" src="http:{{image}}" /></a></div>',
+              get: 'user',
+              userId: '3054008733',
+              target: 'instafeed-portfolio',
+              accessToken: '3054008733.b3ed9be.9fe3223dae414264809154a9598ced09',
+              clientId: 'b3ed9bec7753418a94d68a9aca3c83ee',
+              resolution: 'standard_resolution',
+              limit: 60,
+              sortBy: 'most-recent',
+              after: function () {
+                var images = $("#instafeed-portfolio").find('a');
+                $.each(images, function(index, image) {
+                  var delay = (index * 75) + 'ms';
+                  $(image).css('-webkit-animation-delay', delay);
+                  $(image).css('-moz-animation-delay', delay);
+                  $(image).css('-ms-animation-delay', delay);
+                  $(image).css('-o-animation-delay', delay);
+                  $(image).css('animation-delay', delay);
+                  $(image).addClass('animated flipInX');
+                });
+              },
+              template: '<div class="col-xs-6 col-sm-3"><a href="{{link}}" target="_blank"><img class="img-responsive center-block" src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a></div>'
             });
-            userFeed.run();
+        userFeed.run();
         });
     </script>
+
     <div class="container">
         <header>
             <div class="instafeed-content">

@@ -4,9 +4,15 @@
 
 <section class="section-plain">
   <div class="container">
-    <div class="text-center">
-      <h2>Hours of operation</h2>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h2>Hours of operation</h2>
+
+        <%=image_tag("salon_pic.jpeg", class: "img-responsive", alt: "Alison Cron Fort Worth/DFW Hairstylist", id: "ali_pic_homepage")%>
+
+      </div>
     </div>
+    <br>
     <div class="row text-center">
       <div class="col-sm-4">
         <strong>Wednesday-Friday</strong>
@@ -18,7 +24,7 @@
       </div>
       <div class="col-sm-4">
         <strong>Sunday-Tuesday</strong>
-        <p>Closed</p>
+        <p class="text-danger">Closed</p>
       </div>
     </div>
   </div>
