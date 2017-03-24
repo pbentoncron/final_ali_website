@@ -9,7 +9,7 @@
 
                 <div class="form-group">
                     <label>Review</label>
-                    <input type="text" name="review[content]" value ="<%= @review.content %>" class="form-control">
+                    <textarea type="text" name="review[content]" value ="<%= @review.content %>" class="form-control" rows="4"><%= @review.content %></textarea>
                 </div>
 
                 <button type="submit" value="create" class="btn btn-success">Update</button> | <%= link_to "Back", :back, class: "btn btn-warning" %>
